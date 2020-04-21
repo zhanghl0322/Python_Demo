@@ -37,7 +37,7 @@ def crawlProductComment(url, skuid):
             # 获取会话指针
             with connection.cursor() as cursor:
                 # 创建sql语句
-                sql = "insert into jd_items (`skuid`, `productName`,`commentTime`,`content`,`images_str`) " \
+                sql = "insert into jd_comment (`skuid`, `productName`,`commentTime`,`content`,`images_str`) " \
                       "values (%s,%s,%s,%s,%s)"
                 # 执行sql语句
                 cursor.execute(sql, (skuid, product_name, comment_time, content, nickname))
